@@ -1,0 +1,47 @@
+
+ 
+@media screen and (min-width: 250px) {
+    .box-30{
+        width: 400px; 
+    }
+}
+@media screen and (max-width: 250px) {
+    .box-30{
+        width: 300px; 
+    }
+}
+.box-30{
+    width: 400px; 
+}
+.width-full{
+    width:100%;
+}
+.input{
+    border-bottom: 1px solid gray;
+  border-left:none;  border-right:none;  border-top:none;
+}
+.shadow{
+    -webkit-box-shadow: 0px 0px 90px 0px rgba(181,174,174,1);
+-moz-box-shadow: 0px 0px 90px 0px rgba(181,174,174,1);
+box-shadow: 0px 0px 90px 0px rgba(181,174,174,1);
+}
+
+.box-center {
+   
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em; 
+    display: table;
+   
+  } 
+    .box-transparent{
+     background-color: rgba(255, 255, 255, 0.9);
+    }
+ 
