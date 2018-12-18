@@ -17,7 +17,7 @@ export default new Router({
             name: 'home',
             component: loadView('Home')
         },
-        {
+        { 
             path: '/login',
             name: 'login',
             component: loadView('Login')
@@ -26,6 +26,26 @@ export default new Router({
             path: '/pig/manager',
             name: 'pig-manager',
             component: loadView('PigManager')
+        },
+        {
+            path: '/pig/vaccine',
+            name: 'pig-vaccine',
+            component: loadView('Vaccine')
+        },
+        {
+            path: '/pig/soundcard',
+            name: 'pig-soundcard',
+            component: loadView('SoundCard')
+        },
+        {
+            path: '/pig/cycles',
+            name: 'pig-cycles',
+            component: loadView('PigCycles')
+        },
+        {
+            path: '/pig/cycles/detail',
+            name: 'pig-cycles-detail',
+            component: loadView('PigCycleDetail')
         },
         
         

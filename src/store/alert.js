@@ -1,10 +1,18 @@
- 
+import moment from 'moment';
 import swal from 'sweetalert2'
 const state = {
 
 }
 const getters = {
-
+    format: (state) => (date) => {
+        return moment(date, "DD-MM-YYYY");
+   },
+   thai: (state) => (date) => {
+        return moment(date)
+        .locale("th")
+        .add(543, "years")
+        .format("DD-MM-YYYY"); 
+    }
 }
 
 const mutations = {
@@ -12,6 +20,8 @@ const mutations = {
 }
 
 const actions = {
+
+    
     
         async error(context, params){
                 swal({
@@ -26,6 +36,14 @@ const actions = {
                 type: 'success',
                 title: 'Success...',
                 text: params+' have success.',
+                }) 
+            },
+
+            async havePig(context, params){
+                swal({
+                type: 'success',
+                title: 'Success...',
+                text: params,
                 }) 
             },
 

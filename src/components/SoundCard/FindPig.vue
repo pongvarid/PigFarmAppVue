@@ -89,7 +89,6 @@ export default {
             if(Number(find.data.length) > 0){
               this.setPigChoose(find);
               this.$store.dispatch('alert/havePig','พบหมูแล้ว')
-             await this.$router.push('/pig/cycles');
            
             }else{
               this.$store.dispatch('alert/error','ไม่พบหมู')

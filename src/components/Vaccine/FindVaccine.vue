@@ -8,7 +8,7 @@
       </v-btn>
     </center>
   <div class="mr-40">
-  <v-text-field class="fs20" name="name" label="ค้นหาจากเบอร์ตี" id="id" v-model="pig_id"></v-text-field>
+  <v-text-field class="fs20" name="name" label="ค้นหาวัคซีน" id="id" v-model="pig_id"></v-text-field>
     <v-btn round @click="findPig()" color="lsea" class="full-width" dark>
       <v-icon>mdi-feature-search</v-icon>
   <b>ค้นหา</b></v-btn>
@@ -88,8 +88,7 @@ export default {
             console.log('PigFindSize',find.data.length);
             if(Number(find.data.length) > 0){
               this.setPigChoose(find);
-              this.$store.dispatch('alert/havePig','พบหมูแล้ว')
-             await this.$router.push('/pig/cycles');
+              this.$store.dispatch('alert/havePig','พบแล้ว')
            
             }else{
               this.$store.dispatch('alert/error','ไม่พบหมู')

@@ -14,7 +14,13 @@ import 'animate.css'
 Vue.config.productionTip = false
 
 import VueQrcodeReader from 'vue-qrcode-reader'
+const moment = require('moment');
+require('moment/locale/th');
 
+
+Vue.use(require('vue-moment'), {
+    moment
+})
 Vue.use(VueQrcodeReader)
 Vue.component('my-component', {
   components: {

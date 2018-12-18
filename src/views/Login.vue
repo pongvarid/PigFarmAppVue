@@ -21,7 +21,7 @@
                 <v-btn @click="login()" color="ldeep" class="full-width" dark round large> <h2>Login</h2></v-btn>
               </v-card-actions>
                <v-flex xs12 class="pd-12">
-            alpha version 0.1
+            alpha version 0.2
           </v-flex>
             </v-card>
           </v-flex>
