@@ -56,7 +56,7 @@
             <v-text-field
               slot="activator"
               v-model="form.date"
-              label="วันที่ผสม" 
+              label="วันที่" 
               readonly
             ></v-text-field>
             <v-date-picker locale="th" ref="dateBirth" @input="datePigConvert($refs.dateBirth.inputDate)"></v-date-picker> 
@@ -144,6 +144,7 @@ methods:{
         this.dialog = false;
         this.defaultForm();
         this.load();
+        this.reload();
 
     }, 
     //getdefault form
@@ -165,14 +166,14 @@ methods:{
         id: this.cycleChoose.pig_id,
         cycle_id: this.cycleChoose.id
       };
-     let ui = await  this.$store.dispatch("cycles/findVaccine", cycle);
-
+     let ui = await  this.$store.dispatch("cycles/findVaccine", cycle); 
       this.datas = ui.cycles[this.choose].vaccine; 
       console.log('vaccine',this.datas);
     },
     /******* Methods default run ******/
     load:async function(){
         this.reload();
+         
     }
 },
     }
