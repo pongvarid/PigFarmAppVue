@@ -64,9 +64,9 @@
           </v-menu> 
              <v-text-field @input="countPig()"  type="number"  v-model.number="form.life" label="มีชีวิต"></v-text-field>
              <div v-for="num,index in form.life" class="lok">
-                    <v-text-field type="number" v-model.number="avg[index]" @input="avgCount()" :label="'หมูตัวที่ '+ (index+1)"></v-text-field>
+                    <v-text-field   v-model.number="avg[index]" @input="avgCount()" :label="'หมูตัวที่ '+ (index+1)"></v-text-field>
              </div>
-              <v-text-field @input="countPig()"  type="number"  v-model.number="form.dead" label="ตาย"></v-text-field>
+              <v-text-field @input="countPig()"   type="number"  v-model.number="form.dead" label="ตาย"></v-text-field>
               <v-text-field @input="countPig()"   type="number" v-model.number="form.mummy" label="มัมมี่"></v-text-field>
               <v-text-field @input="countPig()"    type="number" v-model.number="form.deformed" label="พิการ"></v-text-field>
             
@@ -117,7 +117,7 @@ export default {
     
     },
     avgCount(){
-      this.form.pig_weight = this.avg.toString(); 
+      this.form.pig_weight = Number(this.avg).toString(); 
       let sum = _.sum(this.avg);
       let avg = sum/this.avg.length;
       this.form.pig_weight_avg = avg.toFixed(2); 
@@ -137,15 +137,16 @@ export default {
     },
     //getdefault form
     defaultForm() {
-      this.form= {};
-      this.avg = [];
+      this.form= {}; 
     },
 
     storeBirthData: async function() {
            this.form.pig_id = this.cycleChoose.pig_id;
         this.form.pig_cycle_id = this.cycleChoose.id;
          await this.$store.dispatch("birth/storeBirth", this.form);
-         this.offBirthModal();
+          this.avg.length =0;
+          console.log(this.avg);
+          this.offBirthModal();
     },
 
     onUpdateGravidModal(params) {},
