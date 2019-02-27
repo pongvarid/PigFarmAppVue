@@ -63,7 +63,7 @@
             <v-date-picker locale="th" ref="dateBirth" @input="datePigConvert($refs.dateBirth.inputDate)"></v-date-picker> 
           </v-menu> 
              <v-text-field @input="countPig()"  type="number"  v-model.number="form.life" label="มีชีวิต"></v-text-field>
-             <div v-for="num,index in form.life" class="lok">
+             <div :key="index" v-for="(num,index) in form.life" class="lok">
                     <v-text-field   v-model.number="avg[index]" @input="avgCount()" :label="'หมูตัวที่ '+ (index+1)"></v-text-field>
              </div>
               <v-text-field @input="countPig()"   type="number"  v-model.number="form.dead" label="ตาย"></v-text-field>
