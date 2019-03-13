@@ -5,7 +5,7 @@
       <v-tab  key="0" ripple>การผสม</v-tab>
       <v-tab  key="1" ripple>การคลอด</v-tab>
       <v-tab  key="2" ripple>การเลี้ยงลูก</v-tab>
-      <v-tab  key="3" ripple>การอย่านม</v-tab>
+      <v-tab  key="3" ripple>การหย่านม</v-tab>
 
       <v-tab-item  key="0">
         <v-card flat>
