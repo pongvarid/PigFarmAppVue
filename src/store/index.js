@@ -5,6 +5,7 @@ import loading from './loading';
 import alert from "./alert"
 import login from "./login"
 import pig from "./pig"
+import card from "./card"
 import cycles from "./cycles"
 import breeder from "./Cycles/breeder"
 import birth from "./Cycles/birth"
@@ -25,8 +26,8 @@ const modules = {
     feed:feed,
     feedout:feedout,
     milk:milk,
-    vaccine:vaccine
-    
+    vaccine:vaccine,
+    card:card
 }
 
 export default new Vuex.Store({

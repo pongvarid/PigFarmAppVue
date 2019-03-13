@@ -47,6 +47,11 @@ export default new Router({
             name: 'pig-cycles-detail',
             component: loadView('PigCycleDetail')
         },
+        {
+            path: '/pig/card',
+            name: 'pig-card',
+            component: loadView('Card')
+        },
         
         
     ]

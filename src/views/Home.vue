@@ -37,7 +37,7 @@
               </v-layout> 
             </v-card>
 
-             <v-card color="ldeep"  class="white--text  mrt-20 round shadow-bl">
+            <!---- <v-card color="ldeep"  class="white--text  mrt-20 round shadow-bl">
               <v-layout @click="$router.push('pig/vaccine')">
                 <v-flex xs5> 
                   <v-icon class="fs70 mr-20" dark>mdi mdi-needle</v-icon>
@@ -52,7 +52,7 @@
                 </v-flex>
               </v-layout> 
             </v-card>
-
+---->
              <v-card color="lnot"  class="white--text  mrt-20 round shadow-bl">
               <v-layout @click="logout()" >
                 <v-flex xs5> 

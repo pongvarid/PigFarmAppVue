@@ -20,7 +20,7 @@
 
     <script>
 import axios from "@/axios";
-import { get } from "vuex-pathify";
+import { get,sync,call } from "vuex-pathify";
  
 
 export default {
@@ -53,9 +53,11 @@ export default {
   computed: {
     pigChoose:get('pig/pigChoose'),
     setPigChoose:get('pig/setPigChoose'),
+    ...sync('card/*')
   },
   /*-------------------------Methods------------------------------------------*/
   methods: {
+    ...call('card/*'),
     qr: async function() {  
       let pigId = '';
  cordova.plugins.barcodeScanner.scan(
@@ -63,6 +65,7 @@ export default {
        pigId =  result.text; 
      alert('เบอร์ตี : '+ pigId)
     this.getId(pigId);
+
          /* alert("A barcode has been scanned \n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
@@ -72,7 +75,7 @@ export default {
       function (error) {
           alert("Scanning fai led: " + error);
       } 
- );
+ ); 
     }, 
 
     getId(pigId){
@@ -89,7 +92,7 @@ export default {
             if(Number(find.data.length) > 0){
               this.setPigChoose(find);
               this.$store.dispatch('alert/havePig','พบหมูแล้ว')
-           
+             await this.$router.push('/pig/card');
             }else{
               this.$store.dispatch('alert/error','ไม่พบหมู')
             }
