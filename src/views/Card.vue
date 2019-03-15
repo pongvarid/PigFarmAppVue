@@ -2,7 +2,7 @@
  <template>
   <v-content>
     <Navbar/>
-      <pdf :src="url+'/card/'+pigChoose.data[0].id "></pdf>
+      <iframe width="100%" height="100%" :src="url+'/card/'+pigChoose.data[0].id" frameborder="0"></iframe>
  
   
   </v-content>
