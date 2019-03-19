@@ -29,7 +29,8 @@ export default {
   /*-------------------------Run Methods when Start this Page------------------------------------------*/
   async mounted() {
     /**** Call loading methods*/
-    
+    let url=this.url+'/card/'+this.pigChoose.data[0].id
+    window.open(url,'_system', 'location=yes');
   },
   /*-------------------------Run Methods when Start Routed------------------------------------------*/
   async beforeRouteEnter(to, from, next) {

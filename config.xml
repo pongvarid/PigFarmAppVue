@@ -10,6 +10,7 @@
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
+    <allow-navigation href="https://ec2-13-250-40-240.ap-southeast-1.compute.amazonaws.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -32,5 +33,6 @@
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <preference name="StatusBarBackgroundColor" value="#7951ef" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <engine name="android" spec="^7.1.4" />
 </widget>
