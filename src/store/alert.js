@@ -5,13 +5,12 @@ const state = {
 }
 const getters = {
     format: (state) => (date) => {
-        return moment(date, "DD-MM-YYYY");
+        return moment(date, "YYYY-MM-DD");
    },
    thai: (state) => (date) => {
         return moment(date)
-        .locale("th")
-        .add(543, "years")
-        .format("DD-MM-YYYY"); 
+        .locale("th") 
+        .format("YYYY-MM-DD"); 
     }
 }
 

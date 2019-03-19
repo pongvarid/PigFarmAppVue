@@ -57,7 +57,7 @@
             <v-text-field
               slot="activator"
               v-model="form.birth_date"
-              label="วันที่ผสม" 
+              label="วันที่คลอด" 
               readonly
             ></v-text-field>
             <v-date-picker locale="th" ref="dateBirth" @input="datePigConvert($refs.dateBirth.inputDate)"></v-date-picker> 
@@ -117,7 +117,7 @@ export default {
     
     },
     avgCount(){
-      this.form.pig_weight = Number(this.avg).toString(); 
+      this.form.pig_weight = this.avg.toString(); 
       let sum = _.sum(this.avg);
       let avg = sum/this.avg.length;
       this.form.pig_weight_avg = avg.toFixed(2); 

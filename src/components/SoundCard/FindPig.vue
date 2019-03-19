@@ -8,11 +8,15 @@
       </v-btn>
     </center>
   <div class="mr-40">
-  <v-text-field class="fs20" name="name" label="ค้นหาจากเบอร์ตี" id="id" v-model="pig_id"></v-text-field>
-    <v-btn round @click="findPig()" color="lsea" class="full-width" dark>
+
+    <v-form @submit.prevent="findPig()">
+        <v-text-field class="fs20" name="name" label="ค้นหาจากเบอร์ตี" id="id" v-model="pig_id"></v-text-field>
+    <v-btn round  type="submit" color="lsea" class="full-width" dark>
       <v-icon>mdi-feature-search</v-icon>
   <b>ค้นหา</b></v-btn>
+    </v-form>
 
+ 
   </div>
   
   </v-content>

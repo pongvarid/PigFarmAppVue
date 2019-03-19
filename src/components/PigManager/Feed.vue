@@ -107,7 +107,7 @@
             full-width
             min-width="290px"
           >
-            <v-text-field slot="activator" v-model="form.feed_date" label="วันที่ผสม" readonly></v-text-field>
+            <v-text-field slot="activator" v-model="form.feed_date" label="วันที่" readonly></v-text-field>
             <v-date-picker
               locale="th"
               ref="dateFeed"

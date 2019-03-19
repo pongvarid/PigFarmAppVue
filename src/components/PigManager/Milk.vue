@@ -57,7 +57,7 @@
             <v-text-field
               slot="activator"
               v-model="form.milk_date"
-              label="วันที่ผสม" 
+              label="วันที่หย่านม" 
               readonly
             ></v-text-field>
             <v-date-picker locale="th" ref="dateMilk" @input="datePigConvert($refs.dateMilk.inputDate)"></v-date-picker> 
